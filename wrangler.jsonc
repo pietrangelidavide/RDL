@@ -1,0 +1,9 @@
+{
+  // Sito statico di Di Lazzaro, fisioterapista: Cloudflare pubblica i file della cartella "public".
+  // Il nome deve coincidere con il nome del progetto creato su Cloudflare.
+  "name": "dilazzaro-fisio",
+  "compatibility_date": "2026-10-12",
+  "assets": {
+    "directory": "./public"
+  }
+}

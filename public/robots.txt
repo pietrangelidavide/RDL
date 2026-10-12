@@ -1,0 +1,3 @@
+# Sito in anteprima: da togliere quando va online sul dominio vero.
+User-agent: *
+Disallow: /
