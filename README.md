@@ -1,10 +1,10 @@
 # Sito di Riccardo Di Lazzaro, fisioterapista e osteopata
 
-Sito di una pagina per presentare il fisioterapista e osteopata Riccardo Di Lazzaro (Roma, centro Fisiotorrino, via di Fiume Bianco 56, tel. 06 5201799).
+Sito di una pagina per presentare il fisioterapista e osteopata Riccardo Di Lazzaro (Roma, Eur Centro Medico, via di Fiume Bianco 56). Si prenota dal calendario Google (pulsante «Prenota ora») o scrivendo su WhatsApp al 327 573 8791.
 Solo file statici, nessun servizio esterno (i caratteri sono nella cartella `public/fonts`), tema chiaro e scuro che segue il sistema.
 
 ```
-public/index.html     la pagina (testi, struttura, dati per Google)
+public/index.html     la pagina (testi, struttura, dati per Google; i collegamenti «Prenota ora» e WhatsApp sono qui)
 public/style.css      stile e colori (in cima ci sono i colori dei due temi)
 public/foto.jpg       ritratto (foto-640.jpg è la versione per telefoni)
 public/fonts/         Lora e Instrument Sans (licenza OFL)

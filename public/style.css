@@ -73,6 +73,7 @@ body {
 img { max-width: 100%; display: block; }
 a { color: inherit; }
 h1, h2, h3 { font-family: var(--font-head); font-weight: 400; line-height: 1.12; letter-spacing: -0.015em; margin: 0; text-wrap: balance; }
+p { text-wrap: pretty; }
 p { margin: 0; }
 :focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
 .wrap { width: min(100% - 2.5rem, 1120px); margin-inline: auto; }
@@ -97,7 +98,7 @@ section[id] { scroll-margin-top: 4.5rem; }
 .btn-primary:hover { transform: translateY(-1px); filter: brightness(1.06); }
 .btn-ghost { border-color: var(--line); background: var(--surface); color: var(--ink); }
 .btn-ghost:hover { border-color: var(--accent); }
-.btn-sm { padding: .7rem 1.2rem; font-size: .95rem; }
+.btn-sm { padding: .7rem 1.2rem; font-size: .95rem; white-space: nowrap; flex: none; }
 
 /* prima schermata */
 .hero { padding-block: clamp(2.25rem, 6vw, 5rem) clamp(2.5rem, 6vw, 5rem); }
@@ -157,7 +158,7 @@ section[id] { scroll-margin-top: 4.5rem; }
 .treat { background: var(--surface); border-block: 1px solid var(--line); }
 .chips { display: flex; flex-wrap: wrap; gap: .7rem; padding: 0; margin: 0; list-style: none; }
 .chips li { padding: .65rem 1.15rem; border-radius: 999px; background: var(--bg); border: 1px solid var(--line); }
-.fine { margin-top: 1.4rem; color: var(--muted); font-size: .96rem; max-width: 40rem; }
+.fine { margin-top: 1.4rem; color: var(--muted); font-size: .96rem; }
 
 /* recensioni */
 .review-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; list-style: none; padding: 0; margin: 0 0 1.25rem; }
@@ -195,12 +196,12 @@ section[id] { scroll-margin-top: 4.5rem; }
 .contact-card { background: var(--tint); border-radius: var(--r-lg); padding: clamp(1.75rem, 5vw, 3.5rem); display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(1.75rem, 5vw, 4rem); align-items: center; }
 .contact-card h2 { font-size: clamp(1.8rem, 1.1rem + 2.3vw, 2.6rem); }
 .contact-card .block-p { margin-top: .9rem; color: var(--muted); font-size: 1.1rem; max-width: 28em; }
-.phone { display: inline-block; font-family: var(--font-head); font-weight: 700; font-size: clamp(1.9rem, 1.2rem + 2.8vw, 2.8rem); letter-spacing: -.01em; text-decoration: none; color: var(--ink); line-height: 1.1; }
-.phone:hover { color: var(--accent); }
-.place-box { margin-top: 1rem; display: grid; gap: .15rem; }
+.place-box { margin-top: 1.6rem; display: grid; gap: .15rem; }
 .place-box b { font-weight: 700; }
 .place-box span { color: var(--muted); }
-.contact-card .btn { margin-top: 1.4rem; }
+.place-box a { color: var(--ink); }
+.contact-card > div > .btn { margin-top: 1.4rem; }
+.contact-card .cta-row { margin-top: 0; }
 
 /* piè di pagina */
 .site-foot { padding-block: 2.5rem 3rem; color: var(--muted); font-size: .95rem; }
@@ -219,9 +220,13 @@ section[id] { scroll-margin-top: 4.5rem; }
   .brand span { font-size: .78rem; }
 }
 @media (max-width: 420px) {
+  .site-head .wrap { gap: .75rem; }
+  .brand b { font-size: 1.12rem; }
+  .btn-sm { padding-inline: 1rem; }
+  .btn-sm svg { display: none; }
   .cta-row .btn { width: 100%; }
   .portrait-card { left: .6rem; right: .6rem; }
 }
 
-/* i numeri di telefono non vanno mai a capo */
-a[href^='tel:'] { white-space: nowrap; }
+/* il numero di WhatsApp non va mai a capo */
+.place-box a, .site-foot a { white-space: nowrap; }
