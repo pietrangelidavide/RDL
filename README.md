@@ -14,7 +14,7 @@ wrangler.jsonc        pubblicazione su Cloudflare
 
 ## Da completare prima di andare online
 
-- Dati obbligatori nel piè di pagina (partita IVA, iscrizione all'albo professionale) e informativa privacy.
+- Nel piè di pagina ci sono già partita IVA e numero d'albo. Restano da completare: nome dell'Ordine e dell'albo accanto al numero, un indirizzo email (e la PEC), l'informativa privacy.
 - Orari e giorni di visita, se il centro vuole mostrarli.
 - Altre foto (studio, trattamenti) e una foto per la condivisione sui social.
 - Togliere `noindex` da `public/index.html` e cancellare `public/robots.txt` quando il sito va sul dominio vero, altrimenti non comparirà su Google.
