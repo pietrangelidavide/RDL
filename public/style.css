@@ -230,3 +230,14 @@ section[id] { scroll-margin-top: 4.5rem; }
 
 /* il numero di WhatsApp non va mai a capo */
 .place-box a, .site-foot a { white-space: nowrap; }
+
+/* pagina privacy */
+.legal { padding-block: clamp(2.5rem, 6vw, 4.5rem) clamp(2.5rem, 6vw, 4rem); }
+.legal .wrap { width: min(100% - 2.5rem, 46rem); }
+.legal h1 { font-size: clamp(2.1rem, 5.5vw, 3.1rem); }
+.legal .lead { color: var(--muted); margin-top: 1rem; }
+.legal h2 { font-size: clamp(1.25rem, 3vw, 1.5rem); margin-top: 2.5rem; }
+.legal p, .legal ul { margin-top: .85rem; }
+.legal ul { padding-left: 1.25rem; }
+.legal li + li { margin-top: .4rem; }
+.legal a { text-decoration-color: var(--accent); text-underline-offset: 3px; overflow-wrap: anywhere; }
