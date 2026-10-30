@@ -17,7 +17,6 @@ wrangler.jsonc        pubblicazione su Cloudflare
 - Nel piè di pagina ci sono già partita IVA e numero d'albo. Restano da completare: nome dell'Ordine e dell'albo accanto al numero, un indirizzo email (e la PEC), l'informativa privacy.
 - Orari e giorni di visita, se il centro vuole mostrarli.
 - Altre foto (studio, trattamenti) e una foto per la condivisione sui social.
-- Togliere `noindex` da `public/index.html` e cancellare `public/robots.txt` quando il sito va sul dominio vero, altrimenti non comparirà su Google.
 - Recensioni: la sezione «Cosa dicono i pazienti» ora ha solo il collegamento alla scheda Google. Per mostrare le recensioni vere si copiano da Google (testo, stelle, nome e iniziale, mese) e si inseriscono in `public/index.html`, dove c'è il blocco di esempio commentato. Mai inventarle.
 - Controllare con lui l'elenco dei motivi di visita nella sezione «Di che cosa mi occupo».
 
