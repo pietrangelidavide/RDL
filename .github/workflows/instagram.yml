@@ -1,0 +1,63 @@
+name: Instagram
+
+# Ogni 30 minuti controlla se c'è un post approvato la cui data è arrivata e lo pubblica.
+# Non pubblica nulla che non abbia status "approved" e "approved_by" in instagram/calendar.json.
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+    inputs:
+      post_id:
+        description: "Pubblica subito questo post (deve essere approvato)"
+        required: false
+      dry_run:
+        description: "Prova a secco: mostra cosa verrebbe pubblicato"
+        type: boolean
+        default: false
+
+concurrency:
+  group: instagram
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Controlli di sicurezza
+        continue-on-error: true   # un post sbagliato non deve bloccare gli altri: publish ricontrolla ogni post
+        run: python3 instagram/publish.py lint
+
+      - name: Post da pubblicare
+        id: due
+        run: python3 instagram/publish.py due
+
+      - name: Pubblica su Instagram
+        if: steps.due.outputs.ids != '' || inputs.post_id != ''
+        env:
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+          MEDIA_BASE_URL: ${{ vars.MEDIA_BASE_URL }}
+          POST_ID: ${{ inputs.post_id }}
+          DRY: ${{ inputs.dry_run }}
+        run: |
+          args=""
+          [ -n "$POST_ID" ] && args="$args --id $POST_ID"
+          [ "$DRY" = "true" ] && args="$args --dry-run"
+          python3 instagram/publish.py publish $args
+
+      - name: Salva lo stato dei post
+        if: always()
+        run: |
+          git config user.name "instagram-bot"
+          git config user.email "instagram-bot@users.noreply.github.com"
+          git add instagram/calendar.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Instagram: aggiorna lo stato dei post"
+            git pull --rebase origin "${GITHUB_REF_NAME}" && git push origin "HEAD:${GITHUB_REF_NAME}"
+          fi

@@ -1,0 +1,20 @@
+name: Instagram token
+
+# Il token di Instagram dura 60 giorni: lo rinnoviamo il primo di ogni mese.
+# Per aggiornare in automatico il segreto IG_TOKEN serve il segreto GH_PAT
+# (token personale GitHub con permesso "Secrets: read and write" solo su questa repo).
+on:
+  schedule:
+    - cron: "0 6 1 * *"
+  workflow_dispatch:
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Rinnova il token
+        env:
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+          GH_PAT: ${{ secrets.GH_PAT }}
+        run: python3 instagram/publish.py refresh

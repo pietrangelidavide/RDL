@@ -1,0 +1,155 @@
+{
+  "timezone": "Europe/Rome",
+  "max_delay_hours": 36,
+  "default_hashtags": [
+    "#fisioterapia",
+    "#osteopatia",
+    "#roma",
+    "#postura",
+    "#benessere"
+  ],
+  "posts": [
+    {
+      "id": "2026-11-02-presentazione",
+      "type": "image",
+      "publish_at": "2026-11-02T18:30",
+      "status": "draft",
+      "requires_disclaimer": false,
+      "slides": [
+        {
+          "template": "foto",
+          "photo": "assets/riccardo.jpg",
+          "persona": "riccardo",
+          "name": "Riccardo Di Lazzaro",
+          "sub": "Fisioterapista e osteopata · Roma"
+        }
+      ],
+      "alt": [
+        "Riccardo Di Lazzaro, fisioterapista e osteopata, sorride con le braccia incrociate."
+      ],
+      "caption": "Piacere, sono Riccardo.\n\nSono fisioterapista e osteopata a Roma, all'Eur Centro Medico. Mi occupo di terapia manuale, esercizio terapeutico e rieducazione posturale Mézières.\n\nQui trovi informazioni semplici su dolore, movimento e postura.\n\nPer prenotare una valutazione: link in bio."
+    },
+    {
+      "id": "2026-11-04-mal-di-schiena",
+      "type": "carousel",
+      "publish_at": "2026-11-04T18:30",
+      "status": "draft",
+      "slides": [
+        {
+          "template": "cover",
+          "title": "Mal di schiena: serve davvero stare a riposo?"
+        },
+        {
+          "template": "slide",
+          "kicker": "Cosa dice la ricerca",
+          "title": "Muoversi, con gradualità, di solito aiuta.",
+          "body": "Restare fermi a lungo tende a irrigidire i muscoli. Riprendere piano le attività di ogni giorno, senza forzare, è in genere la strada più indicata."
+        },
+        {
+          "template": "slide",
+          "kicker": "Quanto riposare",
+          "title": "Il riposo a letto dura poco.",
+          "body": "Una pausa breve nei primi giorni può dare sollievo. Stare a letto a lungo, invece, riduce la forza dei muscoli e può prolungare il disturbo."
+        },
+        {
+          "template": "mito",
+          "mito": "Se fa male, devo evitare ogni movimento.",
+          "realta": "Il movimento graduale e guidato aiuta il recupero. Se il dolore è forte o dura nel tempo, fatti valutare."
+        },
+        {
+          "template": "slide",
+          "kicker": "Quando non aspettare",
+          "title": "Alcuni segnali vanno valutati subito.",
+          "size": 80,
+          "body": "Dolore che dura oltre qualche settimana, che scende lungo la gamba o che si accompagna a formicolio, febbre o perdita di forza: rivolgiti a un medico o a un professionista della salute."
+        },
+        {
+          "template": "chiusura"
+        }
+      ],
+      "alt": [
+        "Mal di schiena: serve davvero stare a riposo?",
+        "Muoversi, con gradualità, di solito aiuta.",
+        "Il riposo a letto dura poco.",
+        "Mito: se fa male, devo evitare ogni movimento. Realtà: il movimento graduale aiuta il recupero.",
+        "Alcuni segnali vanno valutati subito.",
+        "Hai un dolore che ti limita? Prenota dal link in bio."
+      ],
+      "caption": "Mal di schiena: serve davvero stare a riposo?\n\nNella maggior parte dei casi un movimento graduale aiuta più del riposo prolungato. Scorri per leggere cosa dice la ricerca e quando conviene farsi valutare.\n\nSalva il post per rileggerlo.\n\nInformazione generale: non sostituisce una visita. Per una valutazione prenota dal link in bio."
+    },
+    {
+      "id": "2026-11-06-percorsi-su-misura",
+      "type": "image",
+      "publish_at": "2026-11-06T18:30",
+      "status": "draft",
+      "requires_disclaimer": false,
+      "slides": [
+        {
+          "template": "quote",
+          "text": "Ogni paziente è unico, e per questo costruisco percorsi specifici su misura."
+        }
+      ],
+      "alt": [
+        "Ogni paziente è unico, e per questo costruisco percorsi specifici su misura. Riccardo Di Lazzaro."
+      ],
+      "caption": "Due persone con lo stesso dolore possono avere bisogno di percorsi diversi.\n\nPer questo ogni percorso parte da una valutazione: si ascolta, si esamina, si decide insieme.\n\nPrenota dal link in bio."
+    },
+    {
+      "id": "2026-11-09-collo-scrivania",
+      "type": "carousel",
+      "publish_at": "2026-11-09T18:30",
+      "status": "draft",
+      "slides": [
+        {
+          "template": "cover",
+          "title": "Collo rigido alla scrivania: 3 pause da fare",
+          "size": 100
+        },
+        {
+          "template": "slide",
+          "kicker": "Pausa 1 · Spalle",
+          "title": "Spalle indietro e in basso.",
+          "body": "Ogni ora porta le spalle indietro e verso il basso. Resta così per 5 respiri lenti.",
+          "note": "Fermati se senti dolore. Non sostituisce una visita."
+        },
+        {
+          "template": "slide",
+          "kicker": "Pausa 2 · Collo",
+          "title": "Orecchio verso la spalla.",
+          "body": "Inclina piano la testa da un lato, senza forzare. Resta 20 secondi, poi cambia lato.",
+          "note": "Fermati se senti dolore. Non sostituisce una visita."
+        },
+        {
+          "template": "slide",
+          "kicker": "Pausa 3 · Schiena",
+          "title": "Alzati e cammina un minuto.",
+          "body": "Cambiare posizione scioglie schiena e collo più di qualsiasi posizione perfetta mantenuta a lungo.",
+          "note": "Fermati se senti dolore. Non sostituisce una visita."
+        },
+        {
+          "template": "chiusura",
+          "title": "Il dolore torna sempre?",
+          "body": "Una valutazione aiuta a capire da dove nasce e cosa fare."
+        }
+      ],
+      "alt": [
+        "Collo rigido alla scrivania: 3 pause da fare",
+        "Spalle indietro e in basso, 5 respiri lenti.",
+        "Orecchio verso la spalla, 20 secondi per lato.",
+        "Alzati e cammina un minuto.",
+        "Il dolore torna sempre? Prenota dal link in bio."
+      ],
+      "caption": "Collo rigido a fine giornata? Prova queste 3 pause, da fare una volta all'ora.\n\nSono semplici, durano meno di due minuti e non servono attrezzi. Se senti dolore, fermati.\n\nSalva il post e mandalo a chi lavora al computer.\n\nInformazione generale: non sostituisce una visita. Per una valutazione prenota dal link in bio."
+    },
+    {
+      "id": "2026-11-11-gatto-cammello",
+      "type": "reel",
+      "publish_at": "2026-11-11T18:30",
+      "status": "draft",
+      "video": "assets/video/gatto-cammello.mp4",
+      "cover_at": 2,
+      "slides": [],
+      "caption": "Gatto-cammello: un esercizio semplice per mobilizzare la schiena.\n\nMettiti a quattro zampe, mani sotto le spalle. Espira e arrotonda la schiena, inspira e allunga guardando avanti. Ripeti 8-10 volte, con calma.\n\nFermati se senti dolore. Informazione generale: non sostituisce una visita. Per una valutazione prenota dal link in bio."
+    }
+  ]
+}
